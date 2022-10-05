@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <style media="screen">
+    .jumbotron {
+      /* margin-top: 0px;
+      margin-bottom: 0px;
+      background-image: url('{% static "images/bg4.png" %}');
+      background-size: cover; */
+      /* background-repeat: no-repeat; */
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+
+      /* Preserve aspet ratio */
+      min-width: 100%;
+      min-height: 100%;
+    }
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+    html,body{
+   height:100%;
+}
+.carousel,.item,.active{
+   height:100%;
+ }
+.carousel-inner{
+    height:100%;
+}
+  </style>
+
+</head>
+
+<body>
+  {% include "vehicle/navbar.html" %}
+  <br><br>
+
+  <!-- <div class="jumbotron" style="margin-bottom: 0px;margin-top: 0px;">
+  </div> -->
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{% static 'images/bg4.png' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Professional Car Repair And Maintainence</h5>
+          <p>We are focused on providing our clients with highest level of quality and excellent customer support.</p>
+        </div>
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static 'images/bg2.png.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>The Best Car Maintainence</h5>
+          <p>2000+ Happy Customers.</p>
+        </div>
+      </div>
+      <div class="carousel-item active">
+        <img src="{% static 'images/bg6.png.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Quality Auto Repair</h5>
+          <p>We Ensure Commitment To Quality.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- <marquee behavior="scroll" direction="left">
+   <img src="{% static "images/ferrari.png" %}" width="120" height="80" alt="ferrari" />
+    <img src="{% static "images/ford.png" %}" width="120" height="80" alt="ford" />
+   <img src="{% static "images/lambo.png" %}" width="120" height="80" alt="lambo" />
+   <img src="{% static "images/mahindra.png" %}" width="120" height="80" alt="mahindra" />
+   <img src="{% static "images/tvs.png" %}" width="120" height="80" alt="tvs" />
+   <img src="{% static "images/tata.png" %}" width="120" height="80" alt="tata" />
+   <img src="{% static "images/hero.png" %}" width="120" height="80" alt="hero" />
+   <img src="{% static "images/rolls.png" %}" width="120" height="80" alt="rolls" />
+   <img src="{% static "images/suzuki.png" %}" width="120" height="80" alt="suzuki" />
+ </marquee> -->
+  <br><br>
+
+  {% include "vehicle/customer_mechanic_cards.html" %}
+<br><br><br><br><br>
+  {% include "vehicle/footer.html" %}
+</body>
+
+</html>

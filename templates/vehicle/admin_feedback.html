@@ -1,0 +1,169 @@
+{% extends 'vehicle/adminbase.html' %}
+
+{% block content %}
+
+
+<head>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .panel-container {
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      font-size: 90%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+      width: 400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .panel-container strong {
+      line-height: 20px;
+    }
+
+    .panel-container p {
+      margin: 25px 0;
+      line-height: 20px;
+    }
+
+    .ratings-container {
+      display: flex;
+      margin: 20px 0;
+    }
+
+    .rating {
+      cursor: pointer;
+      flex: 1;
+      padding: 20px;
+      margin: 10px 5px;
+    }
+
+    .rating.active,
+    .rating:hover {
+      border-radius: 4px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .rating img {
+      width: 40px;
+    }
+
+    .rating small {
+      color: #555;
+      display: inline-block;
+      margin: 10px 0 0;
+    }
+
+    .rating.active small,
+    .rating:hover small {
+      color: #111;
+    }
+
+    .btn {
+      background-color: #302d2b;
+      border: 0;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+      padding: 12px 30px;
+    }
+
+    .fa-heart {
+      color: red;
+      font-size: 30px;
+      margin-bottom: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .alert {
+      margin-left: 25%;
+      margin-right: 25%;
+      padding: 20px;
+      background-color: #f44336;
+      color: white;
+    }
+
+    .closebtn {
+      margin-left: 15px;
+      color: white;
+      font-weight: bold;
+      float: right;
+      font-size: 22px;
+      line-height: 20px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .closebtn:hover {
+      color: black;
+    }
+  </style>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+</head>
+<div style="text-align:center;color:blue;">
+  <h2>Feedback Sent By Customer / Mechanic</h2>
+</div>
+<br><br><br><br><br>
+<div id="panel" class="panel-container">
+  <strong>How satisfied are you with our<br />
+    customer support performance?</strong>
+  <div class="ratings-container">
+    <div class="rating">
+      <div style="font-size:4em;">☹️</div>
+      <small>Unhappy</small>
+    </div>
+    <div class="rating">
+      <div style="font-size:4em;">😐</div>
+      <small>Neutral</small>
+    </div>
+    <div class="rating">
+      <div style="font-size:4em;">😄</div>
+      <small>Satisfied</small>
+    </div>
+  </div>
+  <button class="btn" id="send">Send review</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+{%for f in feedback%}
+<div class="alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+  <strong>{{f.date}} ||By :{{f.by}} </strong><br> {{f.message}}
+</div>
+<br>
+{%endfor%}
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% endblock content %}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style >
+    .container {
+   /* border: 2px solid #ccc;  */
+   background-color: #eee; 
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+  .container {
+      text-align: center;
+  }
+  .container img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+  
+    
+
+  </style>
+
+</head>
+
+<body>
+
+  {% include "vehicle/navbar.html" %}
+  <br><br>
+  <h2>Read What Our Customers Have To Say!</h2>
+
+
+<div class="container">
+  <img src="{% static 'images/bandmember.jpeg' %}" alt="Avatar" style="width:90px; height: 90px;">
+  <p><span>Lily Singh.</span> Bangalore.</p>
+  <p>Doing Great job guys! Excellent service..24/7 available..you guys saved us from a disaster.</p>
+</div>
+
+<div class="container">
+  <img src="{% static 'images/avatar_g2.jpeg' %}" alt="Avatar" style="width:90px; height: 90px;">
+  <p><span>Riya Mishra.</span> Chandigarh.</p>
+  <p> I am confident of their regular service as well as other patch works done so brilliantly. Additionally their bill don't pinch my pocket compared to the other service centres.</p>
+</div>
+
+<div class="container">
+  <img src="{% static 'images/avatar_g3.webp' %}" alt="Avatar" style="width:90px; height: 90px;">
+  <p><span>Shubam Kumar.</span> Kolkata.</p>
+  <p>Wonderful customer support and good car care from the Book my Tars Cars team. Experts who can spot almost all the vehicle problems on the first drive itself gives you a confidence on the type of work they would carry out.</p>
+</div>
+    
+  
+  {% include "vehicle/footer.html" %}
+</body>
+
+</html>

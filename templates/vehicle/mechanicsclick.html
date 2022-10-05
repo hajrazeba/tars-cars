@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style >
+  .container {
+    border: 2px solid #ccc; 
+    background-color: #eee; 
+   border-radius: 5px;
+   padding: 16px;
+   margin: 16px 0
+ }
+ 
+ .container::after {
+   content: " ";
+   clear: both;
+   display: table;
+ }
+ 
+ .container img {
+   float: left;
+   margin-right: 20px;
+   border-radius: 50%;
+ }
+ 
+ .container span {
+   font-size: 20px;
+   margin-right: 15px;
+ }
+ 
+ @media (max-width: 500px) {
+   .container {
+       text-align: center;
+   }
+   .container img {
+       margin: auto;
+       float: none;
+       display: block;
+   }
+ }
+
+  </style>
+
+</head>
+
+<body>
+
+  {% include "vehicle/navbar.html" %}
+
+  <br><br>
+  <div class="container">
+    <img src="{% static 'images/mc1.webp' %}" alt="Avatar" style="width:90px;height: 90px;">
+    <p><span>Rajesh Singh.</span>(6+ years of Experience)</p>
+    <p>Rajesh is very helpful and professional too and is dedicated to customer satisfication.</p>
+  </div>
+  
+  <div class="container">
+    <img src="{% static 'images/mc2.webp' %}" alt="Avatar" style="width:90px;height: 90px;">
+    <p><span>Arun kumar.</span> (4+ years of Experience)</p>
+    <p> Arun is an amazing service buddy.He is very professional and co-operative</p>
+  </div>
+  
+  <div class="container">
+    <img src="{% static 'images/mc3.jpeg' %}" alt="Avatar" style="width:90px;height: 90px;">
+    <p><span>Logesh.</span>(5+ years of Experience)</p>
+    <p>Logesh is just simply amazing.He always makes sure that the customers are satisfied and are left no queries.</p>
+  </div>
+  
+  {% include "vehicle/footer.html" %}
+</body>
+
+</html>
